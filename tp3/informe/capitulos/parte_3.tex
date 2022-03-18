@@ -1,0 +1,155 @@
+1. Defina y explique qué es una reducción polinomial y para qué se utiliza.
+
+2. Explique detalladamente la importancia teórica de los problemas NP-Completos.
+
+3. Tenemos un problema A, un problema B y una caja negra NA y NB que resuelven el problema A y B respectivamente. Sabiendo que B es P
+
+    a. Qué podemos decir de A si utilizamos NA para resolver el problema B (asumimos que la reducción realizada para adaptar el problema B al problema A es polinomial)
+
+    b. Qué podemos decir de A si utilizamos NB para resolver el problema A (asumimos que la reducción realizada para adaptar el problema A al problema B es polinomial)
+
+    c. ¿Qué pasa con los puntos anteriores si no conocemos la complejidad de B, pero sabemos que A es NP-C? \\
+
+\section{}
+
+Una reduccion polinomial es un procedimiento que permite pasar una instancia de un problema $A$ a otro problema $B$ en una complejidad polinomial, y se usa la "facilidad" del problema $B$ para probar la "facilidad" de $A$. \\
+
+
+Un problema $A$ es reducible a un problema $B$ si existe una función polinomial $f: \Sigma^* \rightarrow \Sigma^*$ donde para cada string $w$, $w \in A \leftrightarrow f(w) \in B$. Podemos decir que $f$ es una reducción polinomial de $A$ a $B$.\\
+
+Dada una instancia $\alpha$ de un problema $A$, se usa un algoritmo de reducción polinomial para transformarlo a una instancia $\beta$ de un problema $B$,  resolvemos  $\beta$ mediante  un  algoritmo de decisión de complejidad polinomial y esta solución la transformaremos en la solución $\alpha$. \\
+
+Se concluye que el segundo es al menos tan difıcil (misma complejidad temporal para resolverlo) que el primero. Es por ello que las reducciones se  pueden utilizar  para  probar  que  un  problema  es NP$−$HARD reduciendo  un problema  que previamente se conocıa como NP$−$C a una instancia del problema a demostrar.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/reducciones_polinomialesgrande.png} 
+    \caption{Ejemplo gráfico de la reducción y resolución de Y}
+\end{figure}
+
+\section{}
+
+Los problemas NP-Completos (NP-C) son aquellos que están incluidos en las clases NP y NP-Hard. Es decir, los problemas NP-Completos se pueden verificar en tiempo polinomial y cualquier problema NP se puede reducir a este problema en tiempo polinomial.
+
+Los lenguajes NP-Completos son importantes porque se piensa que todos los lenguajes NP-Completos tienen una dificultad similar, en ese proceso, resolver uno implica que otros también se resuelven.
+
+Si se demuestra que algún problema NP-Completo está en P, entonces se demuestra que todos los NP están en P, teniendo en cuenta que cualquier problema NP se puede reducir a un problema NP-Completo y usando esta reducción y el algoritmo para el problema NP-Completo dado para resolver cualquier problema en NP. Por lo tanto, todos tendrán soluciones de tiempo polinomiales.
+
+Si algún problema NP-Completo no está en P, entonces esto significa que este lenguaje está en NP pero no en P, por lo tanto, esto certifica que P y NP no son iguales.
+
+Por lo tanto, P frente a NP se puede resolver si se demuestra que algún problema de NP-Completo está o no en P. 
+
+\section{}
+Analicemos, para comenzar, los datos que tenemos:\\
+
+\begin{itemize}
+    \item Una caja negra $NA$ que resuelve $A$,
+    \item una caja negra $NB$ que resuelve $B$,
+    \item un problema $A$,
+    \item un problema $B$ que es P.
+\end{itemize}
+
+Con este último dato, sabemos entonces también que $B$ es $NP$.\\
+
+Si se quisiera hallar una relación entre A y B, y sus resoluciones, deberíamos conocer, al menos, si alguno es reducible en tiempo polinómico al otro, es decir:\\
+
+\begin{equation*}
+    A \leq_{p} B \ \vee \  B \leq_{p} A
+\end{equation*}
+
+Mientras tanto, no hay nada más que podamos decir.
+
+\subsection{}
+
+Ahora se cuenta con más información, tal que si se recopila toda la información, se tiene:\\
+
+\begin{itemize}
+    \item Una caja negra $NA$ que resuelve $A$,
+    \item\textbf{Una caja negra $NA$ que resuelve $B$},
+    \item una caja negra $NB$ que resuelve $B$,
+    \item un problema $A$,
+    \item un problema $B$ que es P, y por ende NP,
+    \item \textbf{una relación entre los problemas $A$ y $B$ tal que $B$ $\leq_{p}$ $A$}.
+\end{itemize}
+
+Este último dato lo que quiere decir es que $B$ es reducible en tiempo polinomial a $A$, o lo que es lo mismo, que $A$ es al menos tan difícil como $B$.\\
+Es decir, la complejidad de resolver el problema $A$ es mayor o igual a la complejidad de resolver el problema $B$.\\
+Se concluye, entonces, que $B$ está incluído en el mismo grupo que $A$. No se puede asegurar nada más sobre A, ya que tranquilamente podría ser un problema por fuera del conjunto NP.\\
+
+\subsection{}
+Se nos plantea otra situación similar a la anterior, los datos ahora son:
+
+\begin{itemize}
+    \item Una caja negra $NA$ que resuelve $A$,
+    \item\textbf{Una caja negra $NB$ que resuelve $A$},
+    \item una caja negra $NB$ que resuelve $B$,
+    \item un problema $A$,
+    \item un problema $B$ que es P, y por ende NP,
+    \item \textbf{una relación entre los problemas $A$ y $B$ tal que $A$ $\leq_{p}$ $B$}.
+\end{itemize}
+
+Se sabe entonces que $A$ puede ser resuelto con la misma caja negra $NB$ que $B$. Además $A$ $\leq_{p}$ $B$, que como se dijo anteriormente, quiere decir que $B$ es al menos tan difícil como $A$.\\
+
+Si $B$ es al menos tan difícil como $A$, $A$ es resuelto con $NB$, y a su vez, $NB$ también resuelve $B$, recordando que $B$ es P, resulta que:
+
+\begin{center}
+$A$ es P\\
+\end{center}
+
+Y por ende, también es NP.
+
+\subsection{}
+La situación a analizar es:
+
+\begin{itemize}
+    \item Una caja negra $NA$ que resuelve $A$,
+    \item una caja negra $NB$ que resuelve $B$,
+    \item un problema $A$, que es NP-C,
+    \item un problema $B$.
+\end{itemize}
+
+Es decir, en esta situación, se desconoce la complejidad de B.\\
+
+A su vez, tampoco se puede decir si el problema A tiene una solución que pertenece al conjunto P, pero al conocer que es NP-C si podemos decir que es NP y NP-HARD al mismo tiempo.\\
+
+Esto último es debido a que todavía no se ha demostrado que P = NP. Llegado el caso que se demuestre, entonces, ahí sí se podría decir que A es P, y por ende también NP. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/relaciones entero.png} 
+    \caption{Relaciones}
+\end{figure}
+
+Se procede, entonces, a ver cada caso planteado en el enunciado.
+
+\begin{description}
+
+    \item[a.] Se tiene:
+
+\begin{itemize}
+    \item Una caja negra $NA$ que resuelve $A$,
+    \item\textbf{Una caja negra $NA$ que resuelve $B$},
+    \item una caja negra $NB$ que resuelve $B$,
+    \item un problema $A$, que es NP-C,
+    \item un problema $B$,
+    \item \textbf{una relación entre los problemas $A$ y $B$ tal que $B$ $\leq_{p}$ $A$}.
+\end{itemize}
+
+Nuevamente, gracias al último dato, se demuestra que B tiene una complejidad menor o igual a la de A. Por ende, B es a lo sumo NP-Hard.
+    
+\item[b.] Se tiene:
+
+\begin{itemize}
+    \item Una caja negra $NA$ que resuelve $A$,
+    \item\textbf{Una caja negra $NB$ que resuelve $A$},
+    \item una caja negra $NB$ que resuelve $B$,
+    \item un problema $A$, que es NP-C,
+    \item un problema $B$,
+    \item \textbf{una relación entre los problemas $A$ y $B$ tal que $A$ $\leq_{p}$ $B$}.
+\end{itemize}
+
+Se sabe que el problema $B$ es al menos tan dificil como $A$, o mejor dicho, $B$ tiene una complejidad mayor o igual a la complejidad de $A$.
+
+Se concluye, finalmente, que A es al menos NP-Hard. Esto se puede observar con claridad en el diagrama anterior.
+
+    \end{description}

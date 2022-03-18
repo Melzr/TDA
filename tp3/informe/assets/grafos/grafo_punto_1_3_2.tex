@@ -1,0 +1,44 @@
+ \begin{center}
+    \begin{tikzpicture}[
+            thick, 
+            main/.style = {draw, circle}, 
+            > = stealth, % arrow head style
+            shorten > = 1pt, % don't touch arrow head to node
+            auto,
+            node distance = 3cm, % distance between nodes
+            semithick % line style
+        ]
+        \node[main] (a) {$A$};
+        \node[main] (g) [above right of=a] {$G$};
+        \node[main] (c) [below right of=a] {$C$}; 
+        \node[main] (d) [below right of=g] {$D$};
+        \node[main] (e) [above of=d] {$E$};
+        \node[main] (f) [below of=d] {$F$};
+        \node[main] (b) [above right of=d] {$B$};
+        \node[main] (h) [below right of=d] {$H$};
+
+        \path[->] (a) edge[bend right] node {0} (g);
+        \path[->, blue] (a) edge[bend right] node {7} (c);
+        \path[->] (c) edge[bend right] node {0} (f);
+        \path[->, blue] (c) edge[bend right] node {5} (d);
+        \path[->] (g) edge[bend right] node {5} (d);
+        \path[->, blue] (g) edge[bend right] node {5} (e);
+        \path[->, blue] (e) edge[bend right] node {5} (b);
+        \path[->] (d) edge[bend left] node {0} (b);
+        \path[->] (f) edge[bend right] node {1} (h);
+        \path[->] (h) edge[bend right] node {1} (b);
+        
+        \path[->, loosely dashed] (g) edge[bend right] node {5} (a);
+        \path[->, loosely dashed, blue] (d) edge[bend right] node {0} (g);
+        \path[->, loosely dashed] (d) edge[bend right] node {5} (b);
+        
+        \path[->, loosely dashed] (c) edge[bend right] node {13} (a);
+        \path[->, loosely dashed] (f) edge[bend right] node {8} (c);
+        \path[->, loosely dashed] (h) edge[bend right] node {8} (f);
+        \path[->, loosely dashed] (b) edge[bend right] node {8} (h);
+        
+        \path[->, loosely dashed] (d) edge[bend right] node {5} (c);
+        \path[->, loosely dashed] (b) edge[bend right] node {5} (e);
+        \path[->, loosely dashed] (e) edge[bend right] node {5} (g);
+    \end{tikzpicture} 
+\end{center}
