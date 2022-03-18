@@ -47,8 +47,8 @@ Con:
 
 Se pide:
 
-    1. Responda y complete: ¿Qué le falta a la relación de recurrencia para que se pueda aplicar el teorema maestro?
+1. Responda y complete: ¿Qué le falta a la relación de recurrencia para que se pueda aplicar el teorema maestro?
 
-    2. Calcular la complejidad temporal utilizando el teorema maestro.
+2. Calcular la complejidad temporal utilizando el teorema maestro.
 
-    3. Explique paso a paso cómo llega a la misma.
+3. Explique paso a paso cómo llega a la misma.
