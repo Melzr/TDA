@@ -10,19 +10,19 @@ Aclaración: No existen ciclos negativos!
 
 Se pide:
 
-    1. Investigar el algoritmo de Johnson y explicar cómo funciona. ¿Es óptimo?
+1. Investigar el algoritmo de Johnson y explicar cómo funciona. ¿Es óptimo?
 
-    2. En una tabla comparar la complejidad temporal y espacial de las tres propuestas.
+2. En una tabla comparar la complejidad temporal y espacial de las tres propuestas.
 
-    3. Analizar en qué situaciones una solución es mejor que otras
+3. Analizar en qué situaciones una solución es mejor que otras
 
-    4. Crear un ejemplo con 5 depósitos y mostrar paso a paso cómo lo resolvería el algoritmo de Johnson.
+4. Crear un ejemplo con 5 depósitos y mostrar paso a paso cómo lo resolvería el algoritmo de Johnson.
 
-    5. ¿Puede decirse que Johnson utiliza en su funcionamiento una metodología greedy? Justifique
+5. ¿Puede decirse que Johnson utiliza en su funcionamiento una metodología greedy? Justifique
 
-    6. ¿Puede decirse que Johnson utiliza en su funcionamiento una metodología de programación dinámica? Justifique
+6. ¿Puede decirse que Johnson utiliza en su funcionamiento una metodología de programación dinámica? Justifique
 
-    7. Programar la solución usando el algoritmo de Johnson.
+7. Programar la solución usando el algoritmo de Johnson.
 
 **Formato de los archivos:**
 
