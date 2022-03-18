@@ -23,5 +23,3 @@
 - Lazzaro, Melina - [Melzr](https://github.com/Melzr)
 - Litteri, Iván - [ilitteri](https://github.com/ilitteri)
 - Pinto, Nicolás - [nicopinto22](https://github.com/nicopinto22)
-
-<br/>
