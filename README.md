@@ -3,23 +3,22 @@
 
 <br/>
 
-**Principales temas abordados en la materia:**
+**Temas tp2:**
 
     - Algoritmos Greedy
-    - Algoritmos D&C
+    - Algoritmos de división y conquista
     - Programación dinámica
+
+**Temas tp3:**
+
     - Redes de flujo
-    - Clases de complejidad y reducciones
-    - Algoritmos randomizados
-    - Algoritmos de aproximación
-    - Análisis amortizado
-    - Computabilidad
+    - Clases de complejidad P y NP, reducciones
 
 <br/>
 
-**Integrantes TP2 y TP3:**
-- Castro, Nahuel - [nauee](https://github.com/nauee)
-- Gutson, Ana - [AnaGutson](https://github.com/AnaGutson)
-- Lazzaro, Melina - [Melzr](https://github.com/Melzr)
-- Litteri, Iván - [ilitteri](https://github.com/ilitteri)
-- Pinto, Nicolás - [nicopinto22](https://github.com/nicopinto22)
+**Integrantes del grupo:**
+- [Castro, Nahuel](https://github.com/nauee)
+- [Gutson, Ana](https://github.com/AnaGutson)
+- [Lazzaro, Melina](https://github.com/Melzr)
+- [Litteri, Iván](https://github.com/ilitteri)
+- [Pinto, Nicolás](https://github.com/nicopinto22)
